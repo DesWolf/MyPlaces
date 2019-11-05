@@ -13,6 +13,7 @@
 		9E7809122371A52000407D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E7809102371A52000407D87 /* Main.storyboard */; };
 		9E7809142371A52100407D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E7809132371A52100407D87 /* Assets.xcassets */; };
 		9E7809172371A52100407D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E7809152371A52100407D87 /* LaunchScreen.storyboard */; };
+		9E78091F2371A5FD00407D87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78091E2371A5FD00407D87 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9E7809132371A52100407D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E7809162371A52100407D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E7809182371A52100407D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E78091E2371A5FD00407D87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				9E78090C2371A52000407D87 /* SceneDelegate.swift */,
 				9E78090E2371A52000407D87 /* ViewController.swift */,
 				9E7809102371A52000407D87 /* Main.storyboard */,
+				9E78091E2371A5FD00407D87 /* MainViewController.swift */,
 				9E7809132371A52100407D87 /* Assets.xcassets */,
 				9E7809152371A52100407D87 /* LaunchScreen.storyboard */,
 				9E7809182371A52100407D87 /* Info.plist */,
@@ -141,6 +144,7 @@
 				9E78090F2371A52000407D87 /* ViewController.swift in Sources */,
 				9E78090B2371A52000407D87 /* AppDelegate.swift in Sources */,
 				9E78090D2371A52000407D87 /* SceneDelegate.swift in Sources */,
+				9E78091F2371A5FD00407D87 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +295,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MyPlaces";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.--UIStackView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +313,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MyPlaces";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.--UIStackView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
