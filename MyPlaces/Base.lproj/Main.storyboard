@@ -150,7 +150,7 @@
                                                 <constraint firstItem="c73-8s-1gm" firstAttribute="leading" secondItem="Cuu-AE-PyL" secondAttribute="leading" constant="16" id="542-Z1-exu"/>
                                                 <constraint firstAttribute="bottom" secondItem="c73-8s-1gm" secondAttribute="bottom" constant="4" id="8Y6-Yg-XPD"/>
                                                 <constraint firstItem="c73-8s-1gm" firstAttribute="top" secondItem="Cuu-AE-PyL" secondAttribute="top" constant="8" id="FBd-dr-0V1"/>
-                                                <constraint firstAttribute="trailing" secondItem="c73-8s-1gm" secondAttribute="trailing" constant="16" id="NnQ-Yq-l0Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="c73-8s-1gm" secondAttribute="trailing" priority="999" constant="16" id="NnQ-Yq-l0Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -240,6 +240,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fS8-ka-Gur"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageOfPlace" destination="MQg-qy-n02" id="zfB-pe-f6I"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrK-MK-fBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Okp-Ck-CEC" userLabel="Exit" sceneMemberID="exit"/>

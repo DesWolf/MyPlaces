@@ -9,7 +9,9 @@
 import UIKit
 
 class NewPlaceViewController: UITableViewController {
-
+   
+    @IBOutlet weak var imageOfPlace: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,10 +28,10 @@ class NewPlaceViewController: UITableViewController {
                                                 message: nil,
                                                 preferredStyle: .actionSheet)
             let camera = UIAlertAction(title: "Camera", style: .default) { _ in
-                self.chooseImagePicker(sourse: .camera)
+                self.chooseImagePicker(source: .camera)
                 }
             let photo = UIAlertAction(title: "Photo", style: .default) { _ in
-                self.chooseImagePicker(sourse: .photoLibrary)
+                self.chooseImagePicker(source: .photoLibrary)
                 }
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
@@ -58,15 +60,26 @@ extension NewPlaceViewController: UITextFieldDelegate {
 
 // MARK: Work with image
 
-extension NewPlaceViewController{
+extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-    func chooseImagePicker(sourse: UIImagePickerController.SourceType) {
+    func chooseImagePicker(source: UIImagePickerController.SourceType) {
         
-        if UIImagePickerController.isSourceTypeAvailable(sourse) {
+        if UIImagePickerController.isSourceTypeAvailable(source) {
             let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
             imagePicker.allowsEditing = true
-            imagePicker.sourceType = sourse
+            imagePicker.sourceType = source
             present(imagePicker, animated: true)
         }
     }
+        
+        func imagePickerController(_ picker: UIImagePickerController,
+                                   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+            
+            imageOfPlace.image = info[.editedImage] as? UIImage
+            imageOfPlace.contentMode = .scaleAspectFill
+            imageOfPlace.clipsToBounds = true
+            dismiss(animated: true)
+        }
 }
+
