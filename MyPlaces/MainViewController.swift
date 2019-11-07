@@ -31,7 +31,7 @@ class MainViewController: UITableViewController {
         cell.nameLabel?.text = places[indexPath.row].name
         cell.locationLabel.text = places[indexPath.row].location
         cell.typeLabel.text = places[indexPath.row].type
-        cell.imageOfPlace?.image = UIImage(named: places[indexPath.row].image)
+        cell.imageOfPlace?.image = UIImage(named: places[indexPath.row].restorantImage!)
         cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
         cell.imageOfPlace?.clipsToBounds = true
         
