@@ -16,6 +16,7 @@
 		9E7809142371A52100407D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E7809132371A52100407D87 /* Assets.xcassets */; };
 		9E7809172371A52100407D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E7809152371A52100407D87 /* LaunchScreen.storyboard */; };
 		9E78091F2371A5FD00407D87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78091E2371A5FD00407D87 /* MainViewController.swift */; };
+		9ECA8139237406F90000BB4B /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECA8138237406F90000BB4B /* NewPlaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9E7809162371A52100407D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E7809182371A52100407D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E78091E2371A5FD00407D87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9ECA8138237406F90000BB4B /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				9E31D0EE237290F1002AA344 /* CustomTableViewCell.swift */,
 				9E78091E2371A5FD00407D87 /* MainViewController.swift */,
 				9E31D0F023729AFD002AA344 /* PlaceModel.swift */,
+				9ECA8138237406F90000BB4B /* NewPlaceViewController.swift */,
 				9E7809102371A52000407D87 /* Main.storyboard */,
 				9E7809132371A52100407D87 /* Assets.xcassets */,
 				9E7809152371A52100407D87 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				9E31D0F123729AFD002AA344 /* PlaceModel.swift in Sources */,
 				9E31D0EF237290F1002AA344 /* CustomTableViewCell.swift in Sources */,
 				9E78090B2371A52000407D87 /* AppDelegate.swift in Sources */,
+				9ECA8139237406F90000BB4B /* NewPlaceViewController.swift in Sources */,
 				9E78090D2371A52000407D87 /* SceneDelegate.swift in Sources */,
 				9E78091F2371A5FD00407D87 /* MainViewController.swift in Sources */,
 			);
