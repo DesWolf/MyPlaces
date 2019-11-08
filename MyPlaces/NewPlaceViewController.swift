@@ -9,6 +9,10 @@
 import UIKit
 
 class NewPlaceViewController: UITableViewController {
+    
+    var newPlace: Place?
+    var imageIsChanged = false
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeName: UITextField!
     @IBOutlet weak var placeLocation: UITextField!
@@ -62,6 +66,26 @@ class NewPlaceViewController: UITableViewController {
             view.endEditing(true)
         }
     }
+        func saveNewPlace() {
+            
+            var image: UIImage?
+            
+            if imageIsChanged {
+                image = placeImage.image
+            } else {
+                image = #imageLiteral(resourceName: "imagePlaceholder")
+            }
+            
+            newPlace = Place(name: placeName.text!,
+                             location: placeLocation.text,
+                             type: placeType.text,
+                             image: image,
+                             restorantImage: nil)
+        }
+   
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
 
 // MARK: Texxt field Deligate
@@ -82,6 +106,7 @@ extension NewPlaceViewController: UITextFieldDelegate {
         } else {
             saveButton.isEnabled = false
         }
+        
     }
 }
 
@@ -106,6 +131,9 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
             placeImage.image = info[.editedImage] as? UIImage
             placeImage.contentMode = .scaleAspectFill
             placeImage.clipsToBounds = true
+            
+            imageIsChanged = true
+            
             dismiss(animated: true)
         }
 }
