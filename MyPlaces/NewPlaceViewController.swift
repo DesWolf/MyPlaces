@@ -80,7 +80,7 @@ class NewPlaceViewController: UITableViewController {
                                  type: placeType.text,
                                  imageData: imageData)
                          
-            storageManager.saveObject(newPlace)
+            StorageManager.saveObject(newPlace)
         }
    
     @IBAction func cancelAction(_ sender: Any) {

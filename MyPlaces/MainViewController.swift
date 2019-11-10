@@ -40,9 +40,21 @@ class MainViewController: UITableViewController {
         cell.imageOfPlace?.clipsToBounds = true
 
         return cell
-       }
+    }
 
-
+    // MARK: - Table View Deligate
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let place = places[indexPath.row]
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (_, _) in
+            
+            StorageManager.deletObject(place)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        return [deleteAction]
+    }
     
     // MARK: - Navigation
 
