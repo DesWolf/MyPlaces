@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-let realm = try! Realm ()
+let realm = try! Realm()
 
 class StorageManager {
     
@@ -19,7 +19,8 @@ class StorageManager {
         }
     }
         
-    static func deletObject(_ place:Place) {
+    static func deleteObject(_ place: Place) {
+        
         try! realm.write {
             realm.delete(place)
         }
