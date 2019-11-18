@@ -27,9 +27,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="MQg-qy-n02">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250.00000000000006"/>
                                                     <color key="backgroundColor" red="0.84690276015228427" green="0.84690276015228427" blue="0.84690276015228427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06l-av-hw7">
+                                                    <rect key="frame" x="344" y="189" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="map"/>
+                                                    <connections>
+                                                        <segue destination="Knl-Ud-6SZ" kind="presentation" identifier="showMap" id="HOG-rC-cQb"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="MQg-qy-n02" secondAttribute="trailing" id="7z6-FS-Z2B"/>
@@ -196,6 +204,45 @@
                 <exit id="Okp-Ck-CEC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="229.6875"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="3Qn-AW-Pj1">
+            <objects>
+                <viewController id="Knl-Ud-6SZ" customClass="MapViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VGq-bz-GhL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dBm-ZQ-T7f">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-td-ToC">
+                                <rect key="frame" x="344" y="40" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Z9P-9e-uKr"/>
+                                    <constraint firstAttribute="height" constant="30" id="ibM-KJ-MKv"/>
+                                </constraints>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="closeVC:" destination="Knl-Ud-6SZ" eventType="touchUpInside" id="EXh-1d-yKn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dBm-ZQ-T7f" firstAttribute="leading" secondItem="tyQ-NV-3lu" secondAttribute="leading" id="2ZC-4H-5LX"/>
+                            <constraint firstAttribute="bottom" secondItem="dBm-ZQ-T7f" secondAttribute="bottom" id="OFd-Pe-Nh3"/>
+                            <constraint firstItem="sLa-td-ToC" firstAttribute="top" secondItem="tyQ-NV-3lu" secondAttribute="top" constant="40" id="Pe3-ec-VDN"/>
+                            <constraint firstItem="tyQ-NV-3lu" firstAttribute="trailing" secondItem="sLa-td-ToC" secondAttribute="trailing" constant="40" id="XoP-tB-3hK"/>
+                            <constraint firstItem="dBm-ZQ-T7f" firstAttribute="top" secondItem="VGq-bz-GhL" secondAttribute="top" id="fMZ-C0-D8x"/>
+                            <constraint firstItem="dBm-ZQ-T7f" firstAttribute="trailing" secondItem="tyQ-NV-3lu" secondAttribute="trailing" id="lYZ-hR-khh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tyQ-NV-3lu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6w-PX-TrJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.4637681159422" y="229.6875"/>
         </scene>
         <!--My Places-->
         <scene sceneID="AfR-fg-zeY">
@@ -380,8 +427,10 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="cancel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
+        <image name="map" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CNS-bM-liL"/>
