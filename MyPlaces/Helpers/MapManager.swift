@@ -103,7 +103,7 @@ class MapManager {
     }
     
     //Set route from user to place
-    func getDirections(for mapView: MKMapView, previousLocation: (CLLocation) -> (CLLocationDistance)) {
+    func getDirections(for mapView: MKMapView, previousLocation: (CLLocation) -> ()) {
         
         guard let location = locationManager.location?.coordinate else {
             showAlert(title: "Error", message: "Current location is not found")
