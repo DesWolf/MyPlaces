@@ -21,6 +21,8 @@ class MapViewController: UIViewController {
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var doneButton: UIButton!
     @IBOutlet var goButton: UIButton!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var timeToRoadLabel: UILabel!
     
     var mapViewControllerDeligate: MapViewControllerDeligate?
     var place = Place()
@@ -55,11 +57,15 @@ class MapViewController: UIViewController {
     
     @IBAction func goButtonPressed() {
         getDirections()
+        distanceLabel.isHidden = false
+        timeToRoadLabel.isHidden = false
     }
     
     private func setupMapView() {
         
         goButton.isHidden = true
+        distanceLabel.isHidden = true
+        timeToRoadLabel.isHidden = true
         
         if incomeSegueIdentifier == "showPlace" {
             setupPlacemark()
@@ -67,6 +73,8 @@ class MapViewController: UIViewController {
             addressLabel.isHidden = true
             doneButton.isHidden = true
             goButton.isHidden = false
+           
+            
         }
     }
     
@@ -93,7 +101,7 @@ class MapViewController: UIViewController {
             guard let placemarkLocation = placemark?.location else { return }
             
             anotation.coordinate = placemarkLocation.coordinate
-            self.mapView.selectAnnotation(anotation, animated: true)
+            self.placeCoordinate = placemarkLocation.coordinate
             
             self.mapView.showAnnotations([anotation], animated: true)
             self.mapView.selectAnnotation(anotation, animated: true)
@@ -189,6 +197,8 @@ class MapViewController: UIViewController {
                 let distance = String(format: "%.1f", route.distance / 1000)
                 let timeInterval = route.expectedTravelTime / 60
                 
+                self.distanceLabel.text = "Distance: \(distance) km"
+                self.timeToRoadLabel.text = String("Time for road: \(Int(timeInterval)) min")
                 print("distance \(distance) km")
                 print("Time for road: \(timeInterval) min")
             }

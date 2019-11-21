@@ -30,9 +30,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                     <color key="backgroundColor" red="0.84690276015228427" green="0.84690276015228427" blue="0.84690276015228427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06l-av-hw7">
-                                                    <rect key="frame" x="344" y="189" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06l-av-hw7">
+                                                    <rect key="frame" x="294" y="189" width="100" height="100"/>
                                                     <state key="normal" image="map"/>
                                                     <connections>
                                                         <segue destination="Knl-Ud-6SZ" kind="presentation" identifier="showPlace" id="HOG-rC-cQb"/>
@@ -44,6 +43,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="MQg-qy-n02" secondAttribute="bottom" id="Bk0-R6-eWJ"/>
                                                 <constraint firstItem="MQg-qy-n02" firstAttribute="leading" secondItem="Kq2-kg-Vhr" secondAttribute="leading" id="EI3-sQ-dKk"/>
                                                 <constraint firstItem="MQg-qy-n02" firstAttribute="top" secondItem="Kq2-kg-Vhr" secondAttribute="top" id="ln3-zO-zcr"/>
+                                                <constraint firstItem="06l-av-hw7" firstAttribute="trailing" secondItem="Kq2-kg-Vhr" secondAttribute="trailingMargin" id="pGg-Ji-liK"/>
+                                                <constraint firstItem="06l-av-hw7" firstAttribute="top" secondItem="Kq2-kg-Vhr" secondAttribute="topMargin" constant="178" id="sbR-cK-gDp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -251,7 +252,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i9h-EC-yzP">
-                                <rect key="frame" x="20" y="176" width="374" height="36"/>
+                                <rect key="frame" x="20" y="172.5" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -288,35 +289,59 @@
                                     <action selector="goButtonPressed" destination="Knl-Ud-6SZ" eventType="touchUpInside" id="KDP-MY-7Ee"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULm-6A-baL">
+                                <rect key="frame" x="20" y="108" width="109.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="npi-1Z-CbI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time for road" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cd-tn-1Xu">
+                                <rect key="frame" x="20" y="137" width="109.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EGZ-hE-wyf" firstAttribute="centerX" secondItem="VGq-bz-GhL" secondAttribute="centerX" id="10j-ed-qHN"/>
-                            <constraint firstItem="dBm-ZQ-T7f" firstAttribute="top" secondItem="i9h-EC-yzP" secondAttribute="bottom" constant="-212" id="1jA-Zx-77g"/>
                             <constraint firstItem="dBm-ZQ-T7f" firstAttribute="leading" secondItem="tyQ-NV-3lu" secondAttribute="leading" id="2ZC-4H-5LX"/>
+                            <constraint firstItem="4Cd-tn-1Xu" firstAttribute="width" secondItem="ULm-6A-baL" secondAttribute="width" id="8zF-Tq-IYA"/>
                             <constraint firstItem="tyQ-NV-3lu" firstAttribute="trailing" secondItem="dQ1-cy-HKM" secondAttribute="trailing" constant="45" id="Ai6-95-gwp"/>
                             <constraint firstItem="bfQ-K0-Vid" firstAttribute="centerX" secondItem="VGq-bz-GhL" secondAttribute="centerX" id="CHx-5J-OLR"/>
                             <constraint firstItem="tyQ-NV-3lu" firstAttribute="trailing" secondItem="i9h-EC-yzP" secondAttribute="trailing" constant="20" id="DpO-Oq-udT"/>
                             <constraint firstItem="Lli-46-3Pu" firstAttribute="centerX" secondItem="VGq-bz-GhL" secondAttribute="centerX" id="IOQ-fd-azR"/>
                             <constraint firstItem="tyQ-NV-3lu" firstAttribute="bottom" secondItem="EGZ-hE-wyf" secondAttribute="bottom" constant="40" id="M7S-D3-ZdE"/>
+                            <constraint firstItem="ULm-6A-baL" firstAttribute="leading" secondItem="tyQ-NV-3lu" secondAttribute="leading" constant="20" id="NS5-2P-h06"/>
                             <constraint firstAttribute="bottom" secondItem="dBm-ZQ-T7f" secondAttribute="bottom" id="OFd-Pe-Nh3"/>
+                            <constraint firstItem="tyQ-NV-3lu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Cd-tn-1Xu" secondAttribute="trailing" symbolic="YES" id="Ouh-HD-aaJ"/>
                             <constraint firstItem="sLa-td-ToC" firstAttribute="top" secondItem="tyQ-NV-3lu" secondAttribute="top" constant="40" id="Pe3-ec-VDN"/>
                             <constraint firstItem="tyQ-NV-3lu" firstAttribute="trailing" secondItem="sLa-td-ToC" secondAttribute="trailing" constant="45" id="XoP-tB-3hK"/>
+                            <constraint firstItem="tyQ-NV-3lu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ULm-6A-baL" secondAttribute="trailing" symbolic="YES" id="Y9f-tx-Vle"/>
+                            <constraint firstItem="ULm-6A-baL" firstAttribute="top" secondItem="sLa-td-ToC" secondAttribute="bottom" constant="38" id="Z5R-wn-PrN"/>
                             <constraint firstItem="tyQ-NV-3lu" firstAttribute="bottom" secondItem="dQ1-cy-HKM" secondAttribute="bottom" constant="122" id="cz3-X0-sjK"/>
                             <constraint firstItem="dBm-ZQ-T7f" firstAttribute="top" secondItem="VGq-bz-GhL" secondAttribute="top" id="fMZ-C0-D8x"/>
+                            <constraint firstItem="4Cd-tn-1Xu" firstAttribute="leading" secondItem="tyQ-NV-3lu" secondAttribute="leading" constant="20" id="ftG-EQ-6tv"/>
                             <constraint firstItem="bfQ-K0-Vid" firstAttribute="centerY" secondItem="VGq-bz-GhL" secondAttribute="centerY" constant="-20" id="fup-Xw-bZ0"/>
+                            <constraint firstItem="4Cd-tn-1Xu" firstAttribute="top" secondItem="ULm-6A-baL" secondAttribute="bottom" constant="8" id="gO8-Aw-ctv"/>
                             <constraint firstItem="tyQ-NV-3lu" firstAttribute="bottom" secondItem="Lli-46-3Pu" secondAttribute="bottom" constant="38" id="gRz-St-XGE"/>
                             <constraint firstItem="i9h-EC-yzP" firstAttribute="leading" secondItem="tyQ-NV-3lu" secondAttribute="leading" constant="20" id="j7h-Ri-IaK"/>
                             <constraint firstItem="dBm-ZQ-T7f" firstAttribute="trailing" secondItem="tyQ-NV-3lu" secondAttribute="trailing" id="lYZ-hR-khh"/>
+                            <constraint firstItem="i9h-EC-yzP" firstAttribute="top" secondItem="4Cd-tn-1Xu" secondAttribute="bottom" constant="15" id="o5M-Qe-4Tb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tyQ-NV-3lu"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="i9h-EC-yzP" id="PhH-zE-6Sz"/>
+                        <outlet property="distanceLabel" destination="ULm-6A-baL" id="VaU-Pj-fwJ"/>
                         <outlet property="doneButton" destination="EGZ-hE-wyf" id="pi2-X6-eOb"/>
                         <outlet property="goButton" destination="Lli-46-3Pu" id="Gps-eJ-hsE"/>
                         <outlet property="mapPinImage" destination="bfQ-K0-Vid" id="u89-9t-taY"/>
                         <outlet property="mapView" destination="dBm-ZQ-T7f" id="H3E-6h-7IK"/>
+                        <outlet property="timeToRoadLabel" destination="4Cd-tn-1Xu" id="cQ4-Ym-Z7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6w-PX-TrJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
