@@ -72,7 +72,6 @@ class NewPlaceViewController: UITableViewController {
     }
     
     // MARK: Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard
@@ -145,13 +144,15 @@ class NewPlaceViewController: UITableViewController {
         dismiss(animated: true)
     }
 
+    deinit {
+        print("deinit", NewPlaceViewController.self)
+    }
 }
 
-// MARK: Text field Deligate
+    // MARK: Text field Deligate
 extension NewPlaceViewController: UITextFieldDelegate {
     
     // Hide keyboard by clicking "Done"
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

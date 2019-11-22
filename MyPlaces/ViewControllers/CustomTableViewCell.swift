@@ -25,5 +25,4 @@ class CustomTableViewCell: UITableViewCell {
             cosmosView.settings.updateOnTouch = false
         }
     }
-    
 }

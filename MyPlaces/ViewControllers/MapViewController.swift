@@ -68,18 +68,12 @@ class MapViewController: UIViewController {
     @IBAction func goButtonPressed() {
         mapManager.getDirections(for: mapView) { (location) in
             self.previousLocation = location
-        //distanceLabel.isHidden = false
-        //timeToRoadLabel.isHidden = false
         }
-        //distanceLabel.text = "Distance: \(distance) km"
-        //timeToRoadLabel.text = String("Time for road: \(Int(timeInterval)) min")
     }
     
     func setupMapView() {
         
         goButton.isHidden = true
-        distanceLabel.isHidden = true
-        timeToRoadLabel.isHidden = true
         
         mapManager.checkLocationServices(mapView: mapView, segueIdentifier: incomeSegueIdentifier) {
             mapManager.locationManager.delegate = self
@@ -92,6 +86,10 @@ class MapViewController: UIViewController {
             doneButton.isHidden = true
             goButton.isHidden = false
         }
+    }
+    
+    deinit {
+        print("deinit", MapViewController.self)
     }
 }
     

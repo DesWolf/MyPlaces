@@ -204,4 +204,7 @@ class MapManager {
         alertWindow.makeKeyAndVisible()
         alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
     }
+    deinit {
+        print("deinit", MapManager.self)
+    }
 }

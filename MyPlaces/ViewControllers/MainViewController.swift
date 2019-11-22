@@ -134,6 +134,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.reloadData()
     }
+    
+    deinit {
+        print("deinit", MainViewController.self)
+    }
 }
 
 extension MainViewController: UISearchResultsUpdating {
