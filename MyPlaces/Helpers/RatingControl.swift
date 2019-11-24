@@ -80,7 +80,7 @@ import UIKit
          
             // Create  the button
             let button = UIButton()
-            button.backgroundColor = .white
+            button.backgroundColor = .none
         
             // Set the button image
             button.setImage(emptyStar, for: .normal)

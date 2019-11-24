@@ -12,7 +12,7 @@ import RealmSwift
 @UIApplicationMain
     class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let schemaVersion: UInt64 = 2
+    let schemaVersion: UInt64 = 4
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let config = Realm.Configuration(
